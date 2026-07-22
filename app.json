@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "c2ff24ae-fff3-4da1-bd74-667c49c68af1"
+      }
+    },
+    "android": {
+      "package": "com.riad2282.workspace"
+    }
+  }
+}

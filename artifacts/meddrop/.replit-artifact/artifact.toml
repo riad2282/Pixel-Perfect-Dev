@@ -1,0 +1,23 @@
+kind = "mobile"
+previewPath = "/"
+title = "MedDrop"
+version = "1.0.0"
+id = "artifacts/meddrop"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 20056
+
+[services.development]
+run = "pnpm --filter @workspace/meddrop run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/meddrop", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/meddrop", "run", "serve" ]
+
+[services.env]
+PORT = "20056"
+BASE_PATH = "/"
