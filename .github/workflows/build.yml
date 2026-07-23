@@ -34,7 +34,7 @@ jobs:
         run: |
           pnpm config set node-linker hoisted
           pnpm install --no-frozen-lockfile
-          pnpm add expo
+          pnpm add expo -w
 
       - name: 📱 Build Android APK
         run: |
