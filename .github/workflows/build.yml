@@ -35,7 +35,7 @@ jobs:
 
       - name: 📱 Build Android APK
         run: |
-          pnpm exec expo prebuild
+          pnpm dlx expo prebuild --clean
           cd android
           chmod +x gradlew
           ./gradlew assembleRelease
