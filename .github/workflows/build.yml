@@ -31,11 +31,14 @@ jobs:
           cache: 'pnpm'
 
       - name: 📦 Install dependencies
-        run: pnpm install --shamefully-hoist --no-frozen-lockfile
+        run: |
+          pnpm config set node-linker hoisted
+          pnpm install --no-frozen-lockfile
+          pnpm add expo
 
       - name: 📱 Build Android APK
         run: |
-          pnpm exec expo prebuild --platform android --clean
+          npx expo prebuild --platform android --clean
           cd android
           chmod +x gradlew
           ./gradlew assembleRelease
