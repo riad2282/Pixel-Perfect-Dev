@@ -1,9 +1,3 @@
-      - name: 📱 Build Android APK
-        run: |
-          pnpm exec expo prebuild
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleRelease
 name: Build Android APK
 
 on:
@@ -41,7 +35,7 @@ jobs:
 
       - name: 📱 Build Android APK
         run: |
-          npx expo prebuild
+          pnpm exec expo prebuild
           cd android
           chmod +x gradlew
           ./gradlew assembleRelease
